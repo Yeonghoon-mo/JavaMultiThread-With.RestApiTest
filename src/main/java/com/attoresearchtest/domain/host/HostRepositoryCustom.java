@@ -9,4 +9,5 @@ public interface HostRepositoryCustom {
 
     // Host List
     List<Host> findByHostList();
+
 }

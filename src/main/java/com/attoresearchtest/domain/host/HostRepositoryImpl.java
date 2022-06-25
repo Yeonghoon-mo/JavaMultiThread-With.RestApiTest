@@ -1,13 +1,8 @@
 package com.attoresearchtest.domain.host;
 
-import com.querydsl.core.types.Projections;
-import com.querydsl.core.types.QBean;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-
 import javax.persistence.EntityManager;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.attoresearchtest.domain.host.QHost.host;
 

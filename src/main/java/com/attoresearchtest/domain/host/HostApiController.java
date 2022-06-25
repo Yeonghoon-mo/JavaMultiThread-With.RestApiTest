@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/host")
 @RequiredArgsConstructor
@@ -33,6 +35,12 @@ public class HostApiController {
     @GetMapping("{id}")
     public HostResponse findById(@PathVariable final Integer id) {
         return hostService.findById(id);
+    }
+
+    // Host List 조회
+    @GetMapping
+    public List<Host> findAll() {
+        return hostService.findAll();
     }
 
 }

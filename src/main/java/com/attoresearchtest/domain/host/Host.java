@@ -16,17 +16,20 @@ public class Host {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;                                         // 호스트 번호(PK)
-    private String name;                                        // 호스트 이름
-    private String ipAddress;                                   // IP 주소
-    private String deleteYn;                                    // 삭제 여부
-    private LocalDateTime createdDate = LocalDateTime.now();    // 등록 시간
-    private LocalDateTime modifiedDate;                         // 수정 시간
+    private Integer id;                                                 // 호스트 번호(PK)
+    private String name;                                                // 호스트 이름
+    private String ipAddress;                                           // IP 주소
+    private String status;                                              // alive 상태
+    private String deleteYn;                                            // 삭제 여부
+    private final LocalDateTime createdDate = LocalDateTime.now();      // 등록 시간
+    private LocalDateTime modifiedDate;                                 // 수정 시간
+    private LocalDateTime statusAliveTime;                              // 마지막 연결 시간
 
     @Builder
-    public Host(String name, String ipAddress, String deleteYn) {
+    public Host(String name, String ipAddress, String status, String deleteYn) {
         this.name = name;
         this.ipAddress = ipAddress;
+        this.status = status;
         this.deleteYn = deleteYn;
     }
 
@@ -41,5 +44,17 @@ public class Host {
     public void delete() {
         this.deleteYn = "Y";
     }
+
+    // Host Status Alive Update
+    public void statusUpdate(String status) {
+        this.status = status;
+    }
+
+    // Host Status Alive Time Update
+    public void statusTimeUpdate() {
+        this.statusAliveTime = LocalDateTime.now();
+    }
+
+
 
 }

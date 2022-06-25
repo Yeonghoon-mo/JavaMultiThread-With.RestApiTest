@@ -14,11 +14,12 @@ public class TestClass {
 
     @Test
     void 호스트등록() {
-        for(int i=0; i<=10; i++) {
+        for(int i=0; i<=98; i++) {
             Host params = Host.builder()
-                    .name("name" + i)
-                    .ipAddress("ipAddress" + i)
-                    .deleteYn("Y")
+                    .name("naver")
+                    .ipAddress("192.168.35.32")
+                    .status("Readable")
+                    .deleteYn("N")
                     .build();
             hostRepository.save(params);
         }
