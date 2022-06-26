@@ -3,7 +3,6 @@ package com.attoresearchtest.domain.host;
 import com.attoresearchtest.exception.CustomException;
 import com.attoresearchtest.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,10 +10,6 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
 @Service
@@ -72,7 +67,7 @@ public class HostService {
         try {
             aliveState = InetAddress.getByName(host.getIpAddress());
         } catch (UnknownHostException e) {
-            throw new CustomException(ErrorCode.IPADDRESS_NOT_FOUND);
+            throw new CustomException(ErrorCode.POSTS_NOT_FOUND);
         }
 
         try {
