@@ -1,4 +1,4 @@
-# 아토리서치 과제 테스트 (Writer. 모영훈)
+# Stream CRUD Test (Writer. 모영훈)
 - 개발기간은 **2022-06-23 ~ 2022-06-26 총 4일** 입니다.
 - Api Test Tool은 **Advanced REST Client**를 사용하였습니다.
 - 프로젝트 다운로드 후 수정해야 할 부분은 resources - application.properties의 DB정보만 수정해 주시면 됩니다 ! 
