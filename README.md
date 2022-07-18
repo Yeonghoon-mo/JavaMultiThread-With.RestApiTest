@@ -1,5 +1,5 @@
 # 프로젝트 소개 (Writer. 모영훈)
-- 해당 프로젝트는 **Rest Api를** 이용하여 Host들의 CRUD를 하는 프로젝트입니다.
+- 해당 프로젝트는 **Rest Api를** 이용하여 Host들의 CRUD Test를 하는 프로젝트입니다.
 - **Java8의 Stream을 사용**하여 Collection Data를 불러오는 방식을 채택하였습니다. (간단한 병렬처리와 코드의 양을 간결하게 줄이기 위하여)
 - Host들의 Alive 상태 확인은 **InetAddress.isReachable()** 메서드를 사용하였습니다.
 
