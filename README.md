@@ -7,7 +7,6 @@
 # Stream CRUD Test 
 - 개발기간은 **2022-06-23 ~ 2022-06-26 총 4일** 입니다.
 - Api Test Tool은 **Advanced REST Client**를 사용하였습니다.
-- 프로젝트 다운로드 후 수정해야 할 부분은 **resources - application.properties**의 DB정보만 수정해 주시면 됩니다.
 
 ## 1. 프로젝트 개발 환경 및 사용 기술
 ------------------------------
