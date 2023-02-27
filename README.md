@@ -1,12 +1,12 @@
 # 프로젝트 소개 (Writer. 모영훈)
-- 해당 프로젝트는 **Rest Api를** 이용하여 Host들의 CRUD Test를 하는 프로젝트입니다.
+- 해당 프로젝트는 **Rest Api를** 이용하여 Host들의 상태를 체크하는 프로젝트입니다.
 - Java8에서 추가된 Stream을 사용하고 있지만, **정확한 이해없이 사용하고 있는 것 같아** 진행하게 된 프로젝트 입니다.
 - **Java8의 Stream을 사용**하여 Collection Data를 불러오는 방식을 채택하였습니다. (간단한 병렬처리와 코드의 양을 간결하게 줄이기 위하여)
 - Host들의 Alive 상태 확인은 **InetAddress.isReachable()** 메서드를 사용하였습니다.
 
 # Stream CRUD Test 
 - 개발기간은 **2022-06-23 ~ 2022-06-26 총 4일** 입니다.
-- Api Test Tool은 **Advanced REST Client**를 사용하였습니다.
+- Api Test Tool은 **Postman**을 사용하였습니다.
 
 ## 1. 프로젝트 개발 환경 및 사용 기술
 ------------------------------
@@ -108,4 +108,3 @@
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/54883318/175810095-179dfe48-c2fe-4b0f-9d83-bba543905595.gif)
 
 ------------------------------
-<h2>읽어주셔서 감사합니다.</h2>
