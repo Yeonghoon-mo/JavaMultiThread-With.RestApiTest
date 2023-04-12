@@ -1,6 +1,8 @@
 package com.attoresearchtest.domain.host;
 
+import com.querydsl.core.types.dsl.Wildcard;
 import com.querydsl.jpa.impl.JPAQueryFactory;
+
 import javax.persistence.EntityManager;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class HostRepositoryImpl implements HostRepositoryCustom {
 
     private final JPAQueryFactory queryFactory;
 
-    public HostRepositoryImpl(EntityManager entityManager){
+    public HostRepositoryImpl(EntityManager entityManager) {
         this.queryFactory = new JPAQueryFactory(entityManager);
     }
 
@@ -18,9 +20,10 @@ public class HostRepositoryImpl implements HostRepositoryCustom {
     @Override
     public Long hostCount() {
         return queryFactory
-                .selectFrom(host)
+                .select(Wildcard.count)
+                .from(host)
                 .where(host.deleteYn.eq("N"))
-                .fetchCount();
+                .fetch().get(0);
     }
 
     // Host List
